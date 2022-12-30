@@ -2,8 +2,6 @@ import json
 import time
 
 languages = ["de-DE","en-EN"]
-greeting = "Hallo"
-goodbye = "Auf wiedersehen"
 
 def str_between(str, prefix, suffix):
     runs = count_letters(str, "{")

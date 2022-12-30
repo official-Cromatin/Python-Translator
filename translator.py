@@ -1,10 +1,4 @@
 import json
-import os
-
-languages = ["de-DE","en-EN"]
-lang = "de-DE"
-greeting = "Hallo"
-goodbye = "Auf wiedersehen"
 
 def str_between(str, prefix, suffix):
     runs = count_letters(str, "{")
