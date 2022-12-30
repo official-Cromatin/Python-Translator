@@ -25,7 +25,7 @@ def count_letters(str, searcher):
     return count
 
 def translator(lang, key):
-    file_name = "lang/"+lang+".json"
+    file_name = "demo/lang/"+lang+".json"
     try:
         file = open(file_name)
     except FileNotFoundError:
