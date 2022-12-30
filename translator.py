@@ -32,7 +32,10 @@ def translator(lang, key):
     except FileNotFoundError:
         return "File not found for specified language" 
     dataDE = json.load(file)
-    value = dataDE[key]
+    try:
+        value = dataDE[key]
+    except KeyError:
+        value = "Translation not found"
     replacement_list = str_between(value, "{", "}")
     runs = len(replacement_list)
 

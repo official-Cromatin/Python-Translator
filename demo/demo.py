@@ -1,5 +1,5 @@
 import json
-import os
+import time
 
 languages = ["de-DE","en-EN"]
 greeting = "Hallo"
@@ -31,7 +31,10 @@ def translator(lang, key):
     except FileNotFoundError:
         return "File not found for specified language" 
     dataDE = json.load(file)
-    value = dataDE[key]
+    try:
+        value = dataDE[key]
+    except KeyError:
+        value = "Translation not found"
     replacement_list = str_between(value, "{", "}")
     runs = len(replacement_list)
 
@@ -48,16 +51,16 @@ def translator(lang, key):
     else:
         return value
 
-def language_picker(supported_languages):
-    number = len(supported_languages)
+def language_picker():
+    languages = ["de-DE","en-EN"]
     i = 0
 
     while True:
-        lang = supported_languages[i]
-        eingabe = input(translator(lang, "language.select"))
-        if eingabe == "1":
+        lang = languages[i]
+        entry = input(translator(lang, "language.select"))
+        if entry == "1":
             return "de-DE"
-        elif eingabe == "2":
+        elif entry == "2":
             return "en-EN"
         else:
             if i == 0:
@@ -65,14 +68,26 @@ def language_picker(supported_languages):
             elif i == 1:
                 i = 0
 
-lang = language_picker(languages)
 
-eingabe = input(translator(lang, "input.help"))
-if eingabe == "1":
-    output = translator(lang, "useless.help")
-    print(output)
-elif eingabe == "2":
-    output = translator(lang, "usefull.help").format(placeholder="dann")
-    print(output)
-else:
-    print(translator(lang, "no.help"))
+lang = language_picker()
+
+print('\033[32m'+translator(lang, "greeting")+'\033[0m')
+while True:
+    entry = input('\033[33m'+translator(lang, "action.select")+'\033[0m')
+    if entry == "1":
+        today = time.strftime("%d.%m")
+        times = time.strftime("%H:%M:%S")
+        print('\033[36m'+translator(lang, "time")+'\033[0m')
+    elif entry == "2":
+        print('\033[36m'+translator(lang, "iam")+'\033[0m')
+    elif entry == "3":
+        print('\33[44m'+translator(lang, "color")+'\033[0m')
+    elif entry == "4":
+        print('\033[36m'+translator(lang, "commands")+'\033[0m')
+    elif entry == "5":
+        lang = language_picker()
+    elif entry == "6":
+        print('\033[36m'+translator(lang, "shutdown")+'\033[0m')
+        break
+    else:
+        print('\033[36m'+translator(lang, "no.action")+'\033[0m')

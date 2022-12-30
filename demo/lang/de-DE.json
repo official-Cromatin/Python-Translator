@@ -1,7 +1,11 @@
 {
-    "language.select": "Wähle deine Sprache \n 1. Deutsch \n 2. Englisch \n",
-    "input.help": "Welche Hilfe brauchst du?",
-    "useless.help": "{greeting} Drehe dich drei mal im Kreis, wenns nicht hilft, machs nochmal {goodbye}",
-    "usefull.help": "Schalte dein Gerät aus und {placeholder} wieder ein",
-    "no.help": "Scheinbar brauchst du wohl doch keine Hilfe du Depp"
+    "language.select": "Entscheide dich für eine Sprache \n1. Deutsch \n2. English \n",
+    "greeting": "\nHallo, ich bin Enigma dein Persönlicher Begleiter und Assistent",
+    "action.select": "Welche Aktion soll ich ausführen? \n1. Sag mir das aktuelle Datum und die Uhrzeit \n2. Was bist du? \n3. Wie sieht es mit der Unterstützung für Farben aus?\n4. Kann man direkt Befehle ausführen?\n5. Sprache ändern\n6. Herunterfahren\n",
+    "time": "Aktuell haben wir den {today} und es ist {times}",
+    "iam": "Ich bin Enigma dein Persönlicher Begleiter und Assistent \nMeine Schöpfer sind Python-Translator Inc. \nUnd bin dafür zuständig die Funktionalitäten vorzuführen",
+    "color": "Es wird sogar Farbe unterstützt, auch wenn man sie nicht direkt angeben kann\nDa man aber für verschiedene Sprachen nicht einfach die Farbe ändert sollte es kein Problem darstellen",
+    "commands": "Aufgrund der Formatierung von json ist das leider nicht moglich, genauergesagt würde es zu viele Probleme verursachen",
+    "no.action": "hmm. Diese Aktion ist mir nicht bekannt, Versuche es mit einer anderen",
+    "shutdown": "Bis bald!"
 }

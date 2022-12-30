@@ -1,7 +1,11 @@
 {
-    "language.select": "Set your language \n 1. German \n 2. English \n",
-    "input.help": "What help do you need?",
-    "useless.help": "BlaBla irgendwas auf Englisch Circle Turn Around",
-    "usefull.help": "Turn off and on",
-    "no.help": "Stupid idiot, don't waste my time"
+    "language.select": "Choose a language \n1. German \n2. English \n",
+    "greeting": "\nHello, I am Enigma your Personal Companion and Assistant",
+    "action.select": "Which action should I perform? \n1. Tell me the current date and time \n2. What are you? \n3. What about support for colors?\n4. Can you execute commands directly?\n5. Change language?\n6. Shutdown\n",
+    "time": "Currently we have the {today} and it is {times}",
+    "iam": "I am Enigma your Personal Companion and Assistant \nMy creators are Python-Translator Inc. \nAnd I am in charge of demonstrating the functionalities",
+    "color": "Even color is supported, even if you can't specify it directly\but because you don't just change the color for different languages it shouldn't be a problem",
+    "commands": "Due to the formatting of json this is unfortunately not possible, or more precisely it would cause too many problems.",
+    "no.action": "hmm. This action is not known to me, try it with another",
+    "shutdown": "See ya!"
 }
