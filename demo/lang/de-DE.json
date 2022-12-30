@@ -1,0 +1,7 @@
+{
+    "language.select": "Wähle deine Sprache \n 1. Deutsch \n 2. Englisch \n",
+    "input.help": "Welche Hilfe brauchst du?",
+    "useless.help": "{greeting} Drehe dich drei mal im Kreis, wenns nicht hilft, machs nochmal {goodbye}",
+    "usefull.help": "Schalte dein Gerät aus und {placeholder} wieder ein",
+    "no.help": "Scheinbar brauchst du wohl doch keine Hilfe du Depp"
+}
