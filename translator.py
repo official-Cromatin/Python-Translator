@@ -39,7 +39,10 @@ def translator(lang, key):
     if runs != 0:
         for i in range(runs):
             replacement = replacement_list[i]
-            replacement_value = globals()[replacement]
+            try:
+                replacement_value = globals()[replacement]
+            except KeyError:
+                replacement_value = "Variable not found"
 
             value = value.replace("{"+replacement+"}", replacement_value, 1)
         return value
