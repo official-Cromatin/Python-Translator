@@ -1,5 +1,11 @@
 # Python-Translator
 
+## Which features are offered
+- Language dynamic applications based on Json files
+- Placeholders built into the json value that can be filled with values by optional parameters
+- Easy to use
+- Minimization of data volume accesses, through the caching of content
+
 ## Demonstartion
 
 ```json 
