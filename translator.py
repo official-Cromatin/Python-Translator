@@ -1,4 +1,5 @@
 import json
+from random import randint
 
 class Translator():
     """
@@ -10,7 +11,8 @@ class Translator():
     """
 
     # You are allowed to change these
-    path_prefix = "./lang" # Path under which the json files are found
+    path_prefix = "./lang/" # Path under which the json files are found
+    file_format = ".json" # File format which should be loaded
     placeholder_prefix = "{" # Initial character with which a placeholder is marked
     placeholder_suffix = "}" # End character with which a placeholder is marked
 
@@ -23,7 +25,7 @@ class Translator():
     current_languages = []
     cached_language = {}
 
-    def translate(lang:str, key:str, **kwargs):
+    def translate(lang:str, key:str, pick_random_array_value:bool = True, **kwargs):
         """
         Main method of the class, it calls values depending on the key, adjusts replacement values and returns them as string
         
@@ -31,15 +33,18 @@ class Translator():
         ----------
         - `lang`: Name of the file (excluding the filename extension) to be loaded
         - `key`: Name of the key from which the value is to be retrieved
+        - `pick_random_array_value`: If the value for a json value is an array ...
+            - `True`: ... a value is selected randomly.
+            - `False`: ...  the first value is selected.
         - `**kwargs`: Optional arguments whose values replace the placeholders from the json value
 
         Returns:
         --------
-        `str`: 
+        `str`: String reflecting the entry of the corresponding json file
         """
         if not lang in Translator.current_languages:
             try:
-                text_wrapper = open(Translator.path_prefix)
+                text_wrapper = open(Translator.path_prefix + lang + Translator.file_format)
             except FileNotFoundError:
                 return Translator.error_file_not_found
             else:
@@ -54,6 +59,12 @@ class Translator():
             value:str = Translator.cached_language[lang][key]
         except KeyError:
             return Translator.error_no_key_found
+        
+        if isinstance(value, list):
+            if pick_random_array_value:
+                value = value[randint(0, len(value) - 1)]
+            else:
+                value = value[0]
         
         if kwargs.items():
             opt_args = dict(kwargs.items())
