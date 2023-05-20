@@ -1,11 +1,17 @@
 {
     "language.select": "Choose a language \n1. German \n2. English \n",
     "greeting": "\nHello, I am Enigma your Personal Companion and Assistant",
-    "action.select": "Which action should I perform? \n1. Tell me the current date and time \n2. What are you? \n3. What about support for colors?\n4. Can you execute commands directly?\n5. Change language?\n6. Shutdown\n",
+    "action.select": "Which action should I perform? \n1. Tell me the current date and time \n2. What are you? \n3. What about support for colors?\n4. What if I have different variants of one output?\n5. Change language?\n6. Shutdown\n",
     "time": "Currently we have the {today} and it is {times}",
     "iam": "I am Enigma your Personal Companion and Assistant \nMy creators are Python-Translator Inc. \nAnd I am in charge of demonstrating the functionalities",
     "color": "Even color is supported, even if you can't specify it directly\but because you don't just change the color for different languages it shouldn't be a problem",
-    "commands": "Due to the formatting of json this is unfortunately not possible, or more precisely it would cause too many problems.",
+    "arrays": "If it is determined that the Value is an array a value is randomly selected.\nBy setting a parameter this function can be deactivated and the first element is always output\nSo let me tell you a joke",
+    "random.output": [
+        "The math book is the only place where it's normal to buy 53 melons.",
+        "If a scientist takes a sandwich, is it scientifically proven?",
+        "cut is cut! - Klaus, 42, surgeon.",
+        "I can't think of a joke at the moment. Try again."
+    ],
     "no.action": "hmm. This action is not known to me, try it with another",
     "shutdown": "See ya!"
 }
